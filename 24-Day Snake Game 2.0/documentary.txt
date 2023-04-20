@@ -1,0 +1,7 @@
+The snake game is updated!
+Update:
+	Game will track the highest score and will never change, until you beat the highest score.
+
+Drawbacks:
+	You have to stop the game, by clicking the Stop button, 
+	because the game will reset automatically when you hit the board or hit the snake's body
