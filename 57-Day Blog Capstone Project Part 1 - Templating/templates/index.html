@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{  blogs[0]['title']  }}</h2>
+            <p class="text">{{  blogs[0]['subtitle']  }}</p>
+            <a href="{{  url_for('get_blog', num=1)  }}">Read</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{  blogs[1]['title']  }}</h2>
+            <p class="text">{{  blogs[1]['subtitle']  }}</p>
+            <a href="{{  url_for('get_blog', num=2)  }}">Read</a>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in Warsaw by Aladdin.</p>
+</footer>
+</html>
