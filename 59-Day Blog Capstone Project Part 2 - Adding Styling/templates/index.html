@@ -1,0 +1,80 @@
+{% include "header.html" %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('static/assets/img/homepage.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Aladdin's Blog</h1>
+                            <span class="subheading">A collection of Aladdin's random musings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{{ url_for('get_post', num=1) }}">
+                            {% for post in all_posts %}
+                            {% if post.id == 1 %}
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                            {% endif %}
+                            {% endfor %}
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on September 24, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{{ url_for('get_post', num=2) }}">
+                            {% for post in all_posts %}
+                            {% if post.id == 2 %}
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                            {% endif %}
+                            {% endfor %}
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on September 18, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="{{ url_for('get_post', num=3) }}">
+                            {% for post in all_posts %}
+                            {% if post.id == 3 %}
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                            {% endif %}
+                            {% endfor %}
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on August 24, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+
+{% include "footer.html" %}
